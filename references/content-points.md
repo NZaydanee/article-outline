@@ -59,12 +59,26 @@ Use clear language when a number is theoretical, estimated, or the result of a c
 
 ---
 
+## Minimum Content Points Per Section
+
+Every section must have **at least 5 Content Points**.
+
+This is not a formatting preference — it is a depth requirement. A writing agent expanding 5 points at 2–3 sentences each produces approximately 120–150 words per section, which is the target density for the final article. Fewer than 5 points produces sections that are too thin to reach that range without the writer inventing content.
+
+If the source data does not support 5 concrete, distinct points for a section, flag the gap in the pre-batch clearance step (Step 2) rather than writing thin points or padding with vague ones.
+
+---
+
 ## Section Format (Non-Negotiable)
 
 ```
 ## [SECTION TITLE]
 
 **Content Points:**
+
+- [Point to be conveyed]
+
+- [Point to be conveyed]
 
 - [Point to be conveyed]
 

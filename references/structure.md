@@ -13,14 +13,16 @@ H1 Article Title
 ├── H2 Section 2
 │   └── Content Points
 │
-├── [H2 Mandatory Section — only if `mandatory` column is filled]
+├── [H2 Mandatory Section — only if mandatory column has a positive requirement]
 │   └── Content Points
 │
-├── Conclusion Content Points
+├── <kesimpulan> Conclusion Content Points </kesimpulan>
 │
-└── H2 CTA Section
+└── ## CTA Section
     └── CTA Content Points
 ```
+
+**Note on Conclusion format:** The conclusion is **not** a standalone H2. Its content points are wrapped in `<kesimpulan>...</kesimpulan>` tags, placed directly before the CTA section. The CTA section uses `## CTA Section` as its heading.
 
 ---
 
@@ -73,11 +75,27 @@ Present only when the `mandatory` column is filled. This section discusses a spe
 
 ---
 
-### Closing and CTA Section
+### Conclusion
 
-Exactly **2 paragraphs**.
+The conclusion is **not** an H2 heading. It appears as a `<kesimpulan>` block directly before the CTA section.
 
-| Paragraph | Role |
-|---|---|
-| First | General conclusion or brief summary of the article topic (2–3 sentences) |
-| Second | Product/service/brand as the solution, ending with a clear, direct CTA (2–3 sentences) |
+**Format:**
+```
+<kesimpulan>
+- [Conclusion content point]
+- [Conclusion content point]
+</kesimpulan>
+```
+
+Content: 2–3 bullet points summarizing the article's key takeaway. Do not introduce new information.
+
+---
+
+### CTA Section
+
+Uses `## CTA Section` as its heading.
+
+**Content Points:**
+- A narrative bridge connecting the article conclusion to the product
+- 2–3 points presenting the product/service as the solution
+- A direct, actionable CTA as the final point (e.g., visit a URL, download an app, start a purchase)
