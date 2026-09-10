@@ -18,11 +18,12 @@ H1 Article Title
 │
 ├── <kesimpulan> Conclusion Content Points </kesimpulan>
 │
-└── ## CTA Section
+└── CTA (no H2)
+    ├── Narrative bridge
     └── CTA Content Points
 ```
 
-**Note on Conclusion format:** The conclusion is **not** a standalone H2. Its content points are wrapped in `<kesimpulan>...</kesimpulan>` tags, placed directly before the CTA section. The CTA section uses `## CTA Section` as its heading.
+**Note on Conclusion and CTA format:** Neither the conclusion nor the CTA uses an H2 heading. The conclusion is wrapped in `<kesimpulan>...</kesimpulan>` tags. The CTA follows directly after, always opened by a narrative bridge.
 
 ---
 
@@ -93,9 +94,21 @@ Content: 2–3 bullet points summarizing the article's key takeaway. Do not intr
 
 ### CTA Section
 
-Uses `## CTA Section` as its heading.
+The CTA section has **no H2 heading**. It appears as plain paragraphs directly after the `<kesimpulan>` block.
+
+**Structure:**
+- **Narrative bridge** — always present. Connects the conclusion to the product or service being promoted. Can be a standalone paragraph or the opening sentence of the first CTA paragraph, depending on what flows more naturally.
+- **CTA Content Points** — 2–3 points presenting the product/service as the solution, ending with a clear, direct action (visit a URL, contact via WhatsApp, browse a catalogue, etc.)
+
+**Content Points format for CTA (use `**CTA**` as label, not `##`):**
+```
+**CTA**
 
 **Content Points:**
-- A narrative bridge connecting the article conclusion to the product
-- 2–3 points presenting the product/service as the solution
-- A direct, actionable CTA as the final point (e.g., visit a URL, download an app, start a purchase)
+
+- Narrative bridge: [one sentence connecting conclusion to product]
+
+- [Point presenting product/service as solution]
+
+- [Point with specific action — URL, WhatsApp, email, etc.]
+```
