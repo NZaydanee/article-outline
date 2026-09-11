@@ -61,13 +61,11 @@ Use clear language when a number is theoretical, estimated, or the result of a c
 
 ## Minimum Content Points Per Section
 
-Every section must contain **enough Content Points to support 2–3 paragraphs** in the final article.
+Every section must have **at least 5 Content Points**.
 
-In practice, since one Content Point typically expands into one paragraph of 2–3 sentences, this means most sections will need **3–5 Content Points** — not always 5, and never fewer than 3. The right number depends on how complex the topic is and how much distinct information the source provides.
+This is not a formatting preference — it is a depth requirement. A writing agent expanding 5 points at 2–3 sentences each produces approximately 120–150 words per section, which is the target density for the final article. Fewer than 5 points produces sections that are too thin to reach that range without the writer inventing content.
 
-The test is simple: if a writer were to expand each Content Point into a paragraph, would the section read as 2–3 complete, non-repetitive paragraphs? If yes, the section has enough. If no, add more points — but only from verified source data, never invented.
-
-If the source data genuinely cannot support 3 distinct Content Points for a section, flag the gap in the Pre-Batch Clearance step (Step 2) rather than padding with thin or vague points.
+If the source data does not support 5 concrete, distinct points for a section, flag the gap in the pre-batch clearance step (Step 2) rather than writing thin points or padding with vague ones.
 
 ---
 
@@ -87,4 +85,4 @@ If the source data genuinely cannot support 3 distinct Content Points for a sect
 - [Point to be conveyed]
 
 - [Point to be conveyed]
-```
+``` 

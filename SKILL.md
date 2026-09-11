@@ -178,4 +178,4 @@ Run silently before saving each file:
 
 ## Step 7: Save and Present
 
-Save the file as `{id} - {anchor text 1}.md`. Present it to the user, then proceed to the next row.
+Save the file as `{id} - {anchor text 1}.md`. Present it to the user, then proceed to the next row. 

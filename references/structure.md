@@ -111,4 +111,4 @@ The CTA section has **no H2 heading**. It appears as plain paragraphs directly a
 - [Point presenting product/service as solution]
 
 - [Point with specific action — URL, WhatsApp, email, etc.]
-```
+``` 
