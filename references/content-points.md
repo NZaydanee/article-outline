@@ -59,13 +59,16 @@ Use clear language when a number is theoretical, estimated, or the result of a c
 
 ---
 
-## Minimum Content Points Per Section
+## Paragraph Grouping Format
 
-Every section must have **at least 5 Content Points**.
+Content Points are grouped by paragraph. Each group has **exactly 2 points**:
 
-This is not a formatting preference — it is a depth requirement. A writing agent expanding 5 points at 2–3 sentences each produces approximately 120–150 words per section, which is the target density for the final article. Fewer than 5 points produces sections that are too thin to reach that range without the writer inventing content.
+- **First point** — the main idea. This becomes the topic sentence of the paragraph.
+- **Second point** — a supporting detail that elaborates, qualifies, or grounds the main idea with a specific fact.
 
-If the source data does not support 5 concrete, distinct points for a section, flag the gap in the pre-batch clearance step (Step 2) rather than writing thin points or padding with vague ones.
+This grouping gives the writer a clear signal: these two points belong in one paragraph, in this order. The writer does not decide which points go together — the Planner already decided.
+
+**The number of paragraph groups per section is determined by the word count formula in SKILL.md Step 6b.**
 
 ---
 
@@ -74,15 +77,49 @@ If the source data does not support 5 concrete, distinct points for a section, f
 ```
 ## [SECTION TITLE]
 
+**Paragraph 1**
+- [Main idea — becomes the topic sentence]
+- [Supporting detail that elaborates on the main idea]
+
+**Paragraph 2**
+- [Main idea — becomes the topic sentence]
+- [Supporting detail that elaborates on the main idea]
+
+**Paragraph 3** *(only if paragraph budget allows)*
+- [Main idea]
+- [Supporting detail]
+```
+
+---
+
+## Example
+
+### Wrong (flat list — no paragraph coherence)
+
+```
+## Battery Life and Durability
+
 **Content Points:**
+- Battery capacity is 90Wh
+- This provides up to 15 hours of use
+- MIL-STD-810H certification covers 26 test scenarios
+- The chassis uses aluminum alloy construction
+```
 
-- [Point to be conveyed]
+**Problem:** Writer does not know which points belong together. Results in disconnected paragraphs.
 
-- [Point to be conveyed]
+### Right (paragraph groups — clear structure)
 
-- [Point to be conveyed]
+```
+## Battery Life and Durability
 
-- [Point to be conveyed]
+**Paragraph 1**
+- A 90Wh battery delivers up to 15 hours of use on a single charge, covering a full workday without a power outlet.
+- At this capacity, it sits above the category average for business laptops in this price range.
 
-- [Point to be conveyed]
-``` 
+**Paragraph 2**
+- MIL-STD-810H certification validates durability across 26 scenarios including drop, vibration, and dust exposure.
+- The aluminum alloy chassis reinforces structural rigidity at the keyboard deck and display hinge.
+```
+
+**Result:** Writer produces two focused, coherent paragraphs — each with a clear topic sentence and a grounding supporting detail.

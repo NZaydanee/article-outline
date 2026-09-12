@@ -12,20 +12,31 @@ Generates one structured content outline file per table row. Each file contains 
 
 ---
 
-## Step 1: Read All Rows First
+## Step 1: Ask Word Count
 
-Read the entire table before doing anything else. For each row, internally note:
+Before reading the table, ask the user:
 
-- The **focus and angle** of each article to detect topic cannibalization across rows
+> "What is the target word count per article? (Default: 700 words)"
+
+Wait for the answer. If the user does not specify, use **700 words** as the default.
+
+Store this value as `target_words`. It applies to all rows in the batch unless a row's `brief` or `mandatory` column specifies otherwise.
+
+---
+
+## Step 2: Read All Rows
+
+Read the entire table. For each row, internally note:
+
 - Which rows have **empty `source`** and no user-provided data
-- What **topic-critical data** each row requires (see Step 2 for definition)
+- What **topic-critical data** each row requires (see Step 3 for definition)
 - Any **table anomalies** (shifted columns, empty titles, missing fields)
 
 Do not output anything yet.
 
 ---
 
-## Step 2: Pre-Batch Clearance — One Message, No Exceptions
+## Step 3: Pre-Batch Clearance — One Message, No Exceptions
 
 **No row may be written until this step is fully resolved.**
 
@@ -62,7 +73,6 @@ If a row's source lacks topic-critical data, flag it:
 
 > **Rows with insufficient data for their topic:**
 > - Row 44 *(Laptop Tidak Cepat Panas)* — thermal/TDP data not found in source
-> - Row 60 *(Desain Premium)* — material and surface treatment data not found in source
 >
 > Choose one per flagged row:
 > - **A** — You'll provide the missing data (paste here)
@@ -75,7 +85,7 @@ If both Check A and Check B find issues, combine them into **one single message*
 
 ---
 
-## Step 3: Determine Source Data Per Row
+## Step 4: Determine Source Data Per Row
 
 Apply this priority order for each row:
 
@@ -83,13 +93,13 @@ Apply this priority order for each row:
 |---|---|---|
 | 1 | User pasted data in the same message as the table | Use as sole reference. Do not add anything from outside. |
 | 2 | `source` column contains content (URL, markdown, JSON, plain text) | Use as primary reference. Do not supplement with external data. |
-| 3 | `source` is empty | Use web search or data provided in Step 2 reply. |
+| 3 | `source` is empty | Use web search or data provided in Step 3 reply. |
 
 If `source` is a URL, fetch the page. If it is markdown, JSON, or plain text, use it as-is.
 
 ---
 
-## Step 4: Process Rows One by One (Stateless)
+## Step 5: Process Rows One by One (Stateless)
 
 Each row is a fully independent unit.
 
@@ -100,19 +110,43 @@ Each row is a fully independent unit.
 
 ---
 
-## Step 5: Build the Content Outline
+## Step 6: Build the Content Outline
 
 Before writing each row, read:
 - `references/structure.md` — section definitions, H2 count rules, paragraph structure
-- `references/content-points.md` — Content Point writing rules and anti-patterns
-- `references/examples.md` — full output examples (with and without mandatory section)
+- `references/content-points.md` — Content Point writing rules, paragraph grouping format, and word count formula
+- `references/examples.md` — full output examples
 
-### 5a. Determine H2 Count from Title
+### 6a. Determine H2 Count from Title
 
 - **Title contains an explicit number** (e.g., "5 Reasons", "7 Criteria"): that number is a hard structural limit. Numbered H2 sections must equal exactly that number.
-- **Title contains no number**: determine a logical H2 count based on semantic scope, requested word count, and topical groupings. Do not inflate sections to increase word count.
+- **Title contains no number**: determine a logical H2 count based on semantic scope and topical groupings.
 
-### 5b. Read Brief and Mandatory
+H2 count is fixed by the title. It does not change based on word count.
+
+### 6b. Calculate Paragraph Budget Per Section
+
+Use `target_words` and H2 count to determine how many paragraphs each section needs:
+
+```
+available_words    = target_words - 150
+per_section_budget = available_words ÷ H2_count
+paragraphs_per_section = max(2, round(per_section_budget ÷ 55))
+```
+
+Where 150 = estimated intro + CTA word budget, and 55 = approximate words per paragraph.
+
+Quick reference:
+
+| target_words | 4 H2 | 5 H2 | 6 H2 |
+|---|---|---|---|
+| 700 | 2–3 paragraphs | 2 paragraphs | 2 paragraphs |
+| 900 | 3 paragraphs | 2–3 paragraphs | 2 paragraphs |
+| 1100 | 3–4 paragraphs | 3 paragraphs | 2–3 paragraphs |
+
+Each paragraph = **2 Content Points** (main idea + 1 supporting detail). Apply the same formula to the mandatory section.
+
+### 6c. Read Brief and Mandatory
 
 Extract from `brief` and `mandatory` columns:
 - Topic boundaries and prohibited content
@@ -121,7 +155,7 @@ Extract from `brief` and `mandatory` columns:
 - Phrases, sentences, or paragraphs that must appear and their placement
 - Specific H2 sections dedicated to a product (mandatory section)
 
-**Mandatory section rules — read carefully:**
+**Mandatory section rules:**
 
 | `mandatory` column contains | Action |
 |---|---|
@@ -129,13 +163,13 @@ Extract from `brief` and `mandatory` columns:
 | Only restrictions (e.g., "Do not mention X") | No mandatory H2 in body. Restrictions apply globally. Product promotion goes to CTA section only. |
 | Empty | No mandatory section |
 
-If `brief` mentions promoting a product or brand (e.g., "soft selling article untuk mempromosikan X") but `mandatory` only contains restrictions: the promotion belongs **only in the CTA section**, not as a standalone H2 in the article body.
+If `brief` mentions promoting a product or brand but `mandatory` only contains restrictions: the promotion belongs **only in the CTA section**.
 
-### 5c. Resolve Calculations Before Writing
+### 6d. Resolve Calculations Before Writing
 
-If the article requires comparisons, calculations, or practical implications, resolve these **before** writing any Content Point. Label theoretical or estimated figures clearly. Only include a comparison if base data has been verified.
+Resolve all comparisons, calculations, and implications before writing any Content Point. Label theoretical or estimated figures clearly.
 
-### 5d. Write the Outline
+### 6e. Write the Outline
 
 Follow this structure (details in `references/structure.md`):
 
@@ -144,31 +178,39 @@ H1 Article Title
 
 Introduction Content Points
 
-H2 Section 1
-  Content Points
+## H2 Section 1
+  Content Points (paragraph groups)
 
-H2 Section 2
-  Content Points
+## H2 Section 2
+  Content Points (paragraph groups)
 
-[H2 Mandatory Section — only if `mandatory` column is filled]
-  Content Points
+[## H2 Mandatory Section — only if mandatory column has a positive requirement]
+  Content Points (paragraph groups)
 
-Conclusion Content Points
+<kesimpulan>
+- Conclusion point
+- Conclusion point
+</kesimpulan>
 
-H2 CTA Section
-  CTA Content Points
+**CTA**
+
+Content Points:
+- Narrative bridge
+- Product/service point
+- Action point (URL, WhatsApp, etc.)
 ```
 
 ---
 
-## Step 6: Internal Checklist Before Saving
+## Step 7: Internal Checklist Before Saving
 
 Run silently before saving each file:
 
-- [ ] Anchor text 1 appears naturally and contextually in the introduction
+- [ ] Anchor text 1 appears naturally and contextually in the introduction, bolded
 - [ ] Anchor text 2 appears naturally and contextually in the introduction
 - [ ] All instructions in `brief` and `mandatory` have been followed
-- [ ] H2 count matches the rule in Step 5a
+- [ ] H2 count matches the rule in Step 6a
+- [ ] Paragraph count per section matches the budget from Step 6b
 - [ ] Every number or claim has a verified source; no figure is invented
 - [ ] No rules, data, or constraints from other rows have leaked into this file
 - [ ] No cross-references to other rows exist in the file
@@ -176,6 +218,6 @@ Run silently before saving each file:
 
 ---
 
-## Step 7: Save and Present
+## Step 8: Save and Present
 
-Save the file as `{id} - {anchor text 1}.md`. Present it to the user, then proceed to the next row. 
+Save the file as `{id} - {anchor text 1}.md`. Present it to the user, then proceed to the next row.
