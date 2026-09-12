@@ -94,13 +94,29 @@ Content: 2–3 bullet points summarizing the article's key takeaway. Do not intr
 
 ### CTA Section
 
-The CTA section has **no H2 heading**. It appears as plain paragraphs directly after the `<kesimpulan>` block.
+The CTA section always ends with a clear, direct action (visit a URL, contact via WhatsApp, browse a catalogue, etc.) and always opens with a narrative bridge connecting the conclusion to the product or service being promoted.
 
-**Structure:**
-- **Narrative bridge** — always present. Connects the conclusion to the product or service being promoted. Can be a standalone paragraph or the opening sentence of the first CTA paragraph, depending on what flows more naturally.
-- **CTA Content Points** — 2–3 points presenting the product/service as the solution, ending with a clear, direct action (visit a URL, contact via WhatsApp, browse a catalogue, etc.)
+**H2 heading rule:**
 
-**Content Points format for CTA (use `**CTA**` as label, not `##`):**
+The CTA heading is determined by the user's answer in Step 1 (`cta_heading`):
+
+- **User provided heading text** → use it verbatim as the H2 for every row. Never rewrite or paraphrase it.
+- **User said no H2** → format CTA using `**CTA**` as the label (no `##`). Content appears as plain paragraphs after `<kesimpulan>`.
+
+**Content Points format — with H2:**
+```
+## [Heading text from user]
+
+**Content Points:**
+
+- Narrative bridge: [one sentence connecting conclusion to product]
+
+- [Point presenting product/service as solution]
+
+- [Point with specific action — URL, WhatsApp, email, etc.]
+```
+
+**Content Points format — without H2:**
 ```
 **CTA**
 

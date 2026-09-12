@@ -12,15 +12,21 @@ Generates one structured content outline file per table row. Each file contains 
 
 ---
 
-## Step 1: Ask Word Count
+## Step 1: Batch Settings
 
-Before reading the table, ask the user:
+Before reading the table, ask the user two questions in one message:
 
-> "What is the target word count per article? (Default: 700 words)"
+> "Before we start, two quick settings:
+>
+> 1. **Target word count per article?** (Default: 700 words)
+> 2. **CTA section heading?**
+>    - **No H2** — CTA appears as plain paragraphs after the conclusion
+>    - **Yes, H2** — provide the exact heading text you want (e.g., *"Temukan AIS Receiver di IAPS"*)"
 
-Wait for the answer. If the user does not specify, use **700 words** as the default.
+Wait for one reply. Then:
 
-Store this value as `target_words`. It applies to all rows in the batch unless a row's `brief` or `mandatory` column specifies otherwise.
+- Store the word count as `target_words`. Default is **700** if not specified. Applies to all rows unless a row's `brief` or `mandatory` overrides it.
+- Store the CTA heading preference as `cta_heading`. If the user provides heading text, use it verbatim for every row. If the user says no H2, format CTA as plain paragraphs using `**CTA**` as the label in the outline (no `##`).
 
 ---
 

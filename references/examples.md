@@ -106,7 +106,7 @@ These are complete output examples. Use them to calibrate tone, depth, and forma
 - Sesuaikan pilihan reksa dana sesuai dengan kebutuhan dan anggaran Anda
 </kesimpulan>
 
-## CTA Section 
+## CTA Section
 - Data biaya dan kinerja tiap produk ditampilkan terbuka di Makmur.id (anchor 2).
 - Pembelian dapat dimulai dari Rp10.000 lewat aplikasi Makmur.
 - Makmur didirikan oleh para pakar teknologi dan finansial berpengalaman di Silicon Valley dan Wall Street, dan menerapkan teknologi analisis berbasis data untuk membantu investor membangun kekayaan jangka panjang.
