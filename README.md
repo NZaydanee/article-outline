@@ -1,7 +1,6 @@
 # Content Outline Skill
 
-Skill untuk menghasilkan content outline terstruktur dari tabel input artikel.
-
+Skill untuk menghasilkan content outline.
 ## Dua Varian
 
 | Folder | Bahasa Output | Dipakai dengan |
@@ -9,7 +8,7 @@ Skill untuk menghasilkan content outline terstruktur dari tabel input artikel.
 | `content-outline-id/` | Bahasa Indonesia | Writing agent berbahasa Indonesia |
 | `content-outline-en/` | English | Writing agent berbahasa Inggris |
 
-Kedua varian berbagi logika workflow yang sama. Perbedaannya hanya pada bahasa output Content Points, label paragraf, dan judul section.
+Kedua varian menggunakan logika workflow yang sama. Perbedaannya hanya pada bahasa output Content Points, label paragraf, dan judul section.
 
 ## Struktur
 
@@ -35,4 +34,4 @@ Tabel dengan kolom: `id`, `anchor text 1`, `anchor text 2`, `brief`, `mandatory`
 
 ## Output
 
-Satu file `.md` per baris: `{id} - {anchor text 1}.md`
+Satu file `.md` per baris. 
