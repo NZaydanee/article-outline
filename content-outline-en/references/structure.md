@@ -45,13 +45,24 @@ H1 Article Title
 
 **Paragraph count:** 2–3 groups, each with 1 `[main]` + 1 or more other labels.
 
-| Paragraph | Role |
-|---|---|
-| First | Broad context relevant to the general topic |
-| Second | Narrower context focused on the article's specific topic |
-| Third | Bridge that guides the reader into the main content |
+The introduction has no locked role per paragraph. Its content is determined by the facts available in the source for this specific article — not by a category template.
 
-Anchor text 1 is bolded and appears naturally in the introduction. Anchor text 2 appears naturally in the same or adjacent paragraph.
+**Anti-template rule (mandatory):**
+
+Every `[main]` in the introduction must pass this test: *could this sentence be moved to another article in the same topic without changing its meaning?* If yes → the sentence is too generic and must be replaced with a specific fact from the source.
+
+Not allowed — sentences that could appear in any article in the same category:
+- "Indoor attractions have become a favorite choice for families looking to have fun regardless of the weather."
+- "There are many family travel destinations to choose from, but not all of them remain popular for decades."
+
+Correct — specific facts that only apply to the subject of this article:
+- Specific names, attraction counts, themed zones, ticket prices, founding year, or a detail that distinguishes this subject from other articles in the same category
+- Example: "Trans Studio Bandung operates 20 active attractions across seven themed zones inside a single 4.2-hectare building."
+
+**Anchor text rules:**
+- Anchor text 1 is bolded and appears naturally in the introduction
+- Anchor text 2 appears naturally in the same or adjacent paragraph
+- Anchor text placement must not force a sentence to become generic — if it is difficult to place naturally, move it to another paragraph in the introduction
 
 ---
 

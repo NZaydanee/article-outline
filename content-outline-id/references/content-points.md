@@ -10,18 +10,34 @@ Penulis yang menerima Content Points hanya melakukan *surface realization*: meng
 
 Setiap Content Point harus diberi label yang menunjukkan fungsinya dalam paragraf:
 
-| Label | Definisi | Posisi dalam paragraf |
+| Label | Pertanyaan yang dijawab | Posisi |
 |---|---|---|
-| `[utama]` | Ide pokok paragraf; menjadi kalimat topik | Selalu pertama |
-| `[penjelas]` | Menjelaskan atau menguraikan ide utama | Setelah `[utama]` |
-| `[penguat]` | Memperkuat dengan data, angka, atau fakta spesifik | Setelah `[utama]` atau `[penjelas]` |
-| `[tambahan]` | Informasi relevan yang melengkapi tanpa mengulang | Terakhir dalam grup |
+| `[utama]` | Apa yang terjadi / apa faktanya? | Selalu pertama |
+| `[penjelas]` | Bagaimana cara kerjanya? Mengapa demikian? | Setelah `[utama]` |
+| `[penguat]` | Seberapa besar? Apa buktinya? | Setelah `[utama]` atau `[penjelas]` |
+| `[tambahan]` | Apa lagi yang relevan? (tanpa menjelaskan mekanisme atau memberi bukti) | Terakhir dalam grup |
+
+**Cara membedakan keempat label — contoh satu paragraf lengkap:**
+
+```
+- [utama]   Trans Studio Bandung memiliki 20 wahana aktif di tujuh zona tematik.
+- [penjelas] Setiap zona dirancang dengan tema visual berbeda sehingga pengunjung 
+             merasakan suasana yang berganti setiap kali berpindah area.
+- [penguat]  Zona Hollywood dan Cartoon Network mencatat antrean rata-rata terpanjang
+             berdasarkan data operasional 2024.
+- [tambahan] Beberapa wahana memiliki batasan tinggi badan minimal untuk alasan keselamatan.
+```
+
+Penjelasan pilihan label di contoh di atas:
+- `[penjelas]` dipilih karena menjelaskan **mekanisme** (tema berbeda = suasana berbeda)
+- `[penguat]` dipilih karena memberikan **data konkret** (nama zona + data antrean)
+- `[tambahan]` dipilih karena menambahkan fakta terkait **tanpa** menjelaskan mekanisme atau memberi bukti untuk klaim utama
 
 **Aturan label:**
 - Setiap grup paragraf harus memiliki **tepat satu** `[utama]`
 - `[utama]` selalu menjadi poin pertama dalam grup
 - Satu atau lebih label lain mengikuti setelah `[utama]`
-- Urutan setelah `[utama]`: jelaskan dulu → perkuat dengan data → tambahkan konteks
+- Tidak harus menggunakan keempat label — pilih label yang paling tepat untuk informasi yang ada
 
 ---
 

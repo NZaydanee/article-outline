@@ -10,18 +10,34 @@ A writer receiving Content Points performs *surface realization* only: turning p
 
 Every Content Point must carry a label indicating its role in the paragraph:
 
-| Label | Definition | Position in paragraph |
+| Label | Question it answers | Position |
 |---|---|---|
-| `[main]` | The main idea of the paragraph; becomes the topic sentence | Always first |
-| `[supporting]` | Explains or elaborates on the main idea | After `[main]` |
-| `[reinforcing]` | Strengthens with data, numbers, or specific facts | After `[main]` or `[supporting]` |
-| `[additional]` | Relevant information that completes without repeating | Last in the group |
+| `[main]` | What is the fact / what happened? | Always first |
+| `[supporting]` | How does it work? Why is that? | After `[main]` |
+| `[reinforcing]` | How much? What is the evidence? | After `[main]` or `[supporting]` |
+| `[additional]` | What else is relevant? (without explaining mechanism or providing evidence) | Last in the group |
+
+**How to distinguish the four labels — one complete paragraph example:**
+
+```
+- [main]        Trans Studio Bandung operates 20 active attractions across seven themed zones.
+- [supporting]  Each zone is designed with a distinct visual theme, so visitors experience 
+                a new atmosphere every time they move to a different area.
+- [reinforcing] The Hollywood and Cartoon Network zones recorded the longest average queues
+                based on 2024 operational data.
+- [additional]  Some attractions have a minimum height requirement for safety reasons.
+```
+
+Why each label was chosen:
+- `[supporting]` explains the **mechanism** (different themes = different atmosphere)
+- `[reinforcing]` provides **concrete data** (zone names + queue data)
+- `[additional]` adds a related fact **without** explaining a mechanism or proving the main claim
 
 **Label rules:**
 - Every paragraph group must have **exactly one** `[main]`
 - `[main]` is always the first point in the group
 - One or more other labels follow after `[main]`
-- Order after `[main]`: explain first → reinforce with data → add context
+- You do not need to use all four labels — choose the label that best fits the information
 
 ---
 

@@ -45,13 +45,25 @@ H1 Judul Artikel
 
 **Jumlah paragraf:** 2–3 grup, masing-masing 1 `[utama]` + 1 atau lebih label lain.
 
-| Paragraf | Peran |
-|---|---|
-| Pertama | Konteks luas yang relevan dengan topik umum |
-| Kedua | Konteks lebih sempit, fokus ke topik spesifik artikel |
-| Ketiga | Jembatan yang mengarahkan pembaca ke isi utama |
+Pendahuluan tidak punya peran yang dikunci per paragraf. Kontennya ditentukan oleh fakta yang tersedia di source untuk artikel ini — bukan oleh template kategori.
 
-Anchor text 1 ditebalkan dan muncul natural di pendahuluan. Anchor text 2 muncul natural di paragraf yang sama atau berdekatan.
+**Aturan anti-template (wajib dipatuhi):**
+
+Setiap `[utama]` di pendahuluan harus lolos uji ini: *apakah kalimat ini bisa dipindahkan ke artikel lain dalam topik yang sama tanpa mengubah maknanya?* Jika bisa → kalimat itu terlalu generik dan harus diganti dengan fakta spesifik dari source.
+
+Dilarang — kalimat yang bisa dipakai di artikel manapun dalam kategori yang sama:
+- "Wahana indoor menjadi pilihan favorit keluarga Indonesia untuk berlibur tanpa bergantung cuaca."
+- "Jakarta punya banyak pilihan tempat wisata keluarga, namun tidak semuanya bertahan populer."
+- "Taman hiburan modern menawarkan pengalaman yang tidak bisa ditemukan di tempat lain."
+
+Yang benar — fakta spesifik yang hanya berlaku untuk subjek artikel ini:
+- Nama spesifik, jumlah wahana, zona tematik, harga tiket, tahun berdiri, atau keunikan yang membedakannya dari artikel lain dalam kategori yang sama
+- Contoh: "Trans Studio Bandung mengoperasikan 20 wahana aktif di tujuh zona tematik dalam satu gedung seluas 4,2 hektare."
+
+**Aturan anchor text:**
+- Anchor text 1 ditebalkan dan muncul natural di pendahuluan
+- Anchor text 2 muncul natural di paragraf yang sama atau berdekatan
+- Penempatan anchor text tidak boleh memaksa kalimat menjadi generik — jika sulit natural, pindahkan ke paragraf lain dalam pendahuluan
 
 ---
 
