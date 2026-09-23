@@ -193,6 +193,12 @@ Run silently before saving each file:
 
 ---
 
+## Output Prohibition
+
+Do not include a metadata block, writer notes, or technical parameter summary in the output. The file must contain only the content outline — from the H1 title through the CTA.
+
+---
+
 ## Step 8: Save and Present
 
 Save as `{id} - {anchor text 1}.md`, present to user, then proceed to the next row.

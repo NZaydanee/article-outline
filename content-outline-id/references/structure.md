@@ -35,7 +35,6 @@ H1 Judul Artikel
 - Pendahuluan, mandatory section, dan CTA **tidak dihitung** dalam total bernomor
 - Satu poin tidak boleh dipecah ke beberapa H2
 - Jangan tambahkan section bonus, tips, atau tambahan kecuali `brief` memintanya secara eksplisit
-- Untuk menambah kedalaman tanpa menambah H2: tambahkan grup paragraf di dalam section yang sudah ada
 
 ---
 
@@ -54,16 +53,17 @@ Setiap `[utama]` di pendahuluan harus lolos uji ini: *apakah kalimat ini bisa di
 Dilarang — kalimat yang bisa dipakai di artikel manapun dalam kategori yang sama:
 - "Wahana indoor menjadi pilihan favorit keluarga Indonesia untuk berlibur tanpa bergantung cuaca."
 - "Jakarta punya banyak pilihan tempat wisata keluarga, namun tidak semuanya bertahan populer."
-- "Taman hiburan modern menawarkan pengalaman yang tidak bisa ditemukan di tempat lain."
+- "Smartphone flagship modern menawarkan spesifikasi yang semakin kompetitif setiap tahunnya."
 
 Yang benar — fakta spesifik yang hanya berlaku untuk subjek artikel ini:
-- Nama spesifik, jumlah wahana, zona tematik, harga tiket, tahun berdiri, atau keunikan yang membedakannya dari artikel lain dalam kategori yang sama
-- Contoh: "Trans Studio Bandung mengoperasikan 20 wahana aktif di tujuh zona tematik dalam satu gedung seluas 4,2 hektare."
+- Nama spesifik, angka, tanggal, harga, atau keunikan yang tidak bisa dipindahkan ke artikel lain
+- Contoh: "Trans Studio Bandung mengoperasikan 20 wahana aktif di tujuh zona tematik dalam satu gedung."
+- Contoh: "Okupansi perkantoran CBD Jakarta tercatat 76% pada kuartal II 2026 menurut riset Colliers Indonesia."
 
 **Aturan anchor text:**
 - Anchor text 1 ditebalkan dan muncul natural di pendahuluan
 - Anchor text 2 muncul natural di paragraf yang sama atau berdekatan
-- Penempatan anchor text tidak boleh memaksa kalimat menjadi generik — jika sulit natural, pindahkan ke paragraf lain dalam pendahuluan
+- Penempatan anchor text tidak boleh memaksa kalimat menjadi generik
 
 ---
 
@@ -71,12 +71,7 @@ Yang benar — fakta spesifik yang hanya berlaku untuk subjek artikel ini:
 
 Jumlah paragraf ditentukan oleh budget dari Langkah 6b di SKILL.md.
 
-Setiap grup paragraf mengikuti format:
-```
-**Paragraf N**
-- [utama] Ide pokok.
-- [penjelas/penguat/tambahan] Elaborasi.
-```
+Setiap grup paragraf mengikuti format dan aturan koherensi di `content-points.md`.
 
 ---
 
@@ -84,11 +79,7 @@ Setiap grup paragraf mengikuti format:
 
 Hanya ada jika kolom `mandatory` berisi **positive requirement** (nama produk atau topik yang harus dibahas).
 
-Jumlah paragraf mengikuti budget yang sama dengan section biasa (Langkah 6b).
-
-Konten fokus pada:
-- Paragraf pertama: konteks produk dan spesifikasi utama
-- Paragraf berikutnya: USP dan keunggulan teknis yang relevan
+Jumlah paragraf mengikuti budget yang sama dengan section biasa.
 
 ---
 

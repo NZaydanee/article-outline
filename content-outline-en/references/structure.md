@@ -32,10 +32,8 @@ H1 Article Title
 | Title contains explicit number | That number is a hard limit for numbered H2 sections |
 | Title contains no number | Determine logically from semantic scope |
 
-- Introduction, mandatory section, and CTA **do not count** toward the numbered total
-- A single point may not be split across multiple H2 sections
-- Do not add bonus, extra, or tip sections unless `brief` explicitly requests content outside the numbered list
-- To add depth without adding H2 sections: add more paragraph groups within an existing section
+- Introduction, mandatory section, and CTA do not count toward the numbered total
+- Do not add bonus, extra, or tip sections unless `brief` explicitly requests them
 
 ---
 
@@ -49,20 +47,20 @@ The introduction has no locked role per paragraph. Its content is determined by 
 
 **Anti-template rule (mandatory):**
 
-Every `[main]` in the introduction must pass this test: *could this sentence be moved to another article in the same topic without changing its meaning?* If yes → the sentence is too generic and must be replaced with a specific fact from the source.
+Every `[main]` in the introduction must pass this test: *could this sentence be moved to another article in the same topic without changing its meaning?* If yes → replace it with a specific fact from the source.
 
 Not allowed — sentences that could appear in any article in the same category:
-- "Indoor attractions have become a favorite choice for families looking to have fun regardless of the weather."
-- "There are many family travel destinations to choose from, but not all of them remain popular for decades."
+- "Indoor attractions have become a favorite choice for families regardless of the weather."
+- "There are many family travel destinations, but not all remain popular for decades."
+- "Modern flagship smartphones offer increasingly competitive specs every year."
 
 Correct — specific facts that only apply to the subject of this article:
-- Specific names, attraction counts, themed zones, ticket prices, founding year, or a detail that distinguishes this subject from other articles in the same category
-- Example: "Trans Studio Bandung operates 20 active attractions across seven themed zones inside a single 4.2-hectare building."
+- Specific names, numbers, dates, prices, or details that cannot be moved to another article
 
 **Anchor text rules:**
 - Anchor text 1 is bolded and appears naturally in the introduction
 - Anchor text 2 appears naturally in the same or adjacent paragraph
-- Anchor text placement must not force a sentence to become generic — if it is difficult to place naturally, move it to another paragraph in the introduction
+- Anchor text placement must not force a sentence to become generic
 
 ---
 
@@ -70,20 +68,13 @@ Correct — specific facts that only apply to the subject of this article:
 
 Paragraph count determined by the budget from Step 6b in SKILL.md.
 
-Each paragraph group follows this format:
-```
-**Paragraph N**
-- [main] Main idea.
-- [supporting/reinforcing/additional] Elaboration.
-```
+Each paragraph group follows the format and coherence rules in `content-points.md`.
 
 ---
 
 ### Mandatory Section
 
-Only present when the `mandatory` column contains a **positive requirement** (product name or topic to discuss).
-
-Paragraph count follows the same budget as regular sections (Step 6b).
+Only present when the `mandatory` column contains a positive requirement. Paragraph count follows the same budget as regular sections.
 
 ---
 
@@ -95,19 +86,18 @@ No H2 heading. Wrapped in `<kesimpulan>...</kesimpulan>` tags.
 <kesimpulan>
 - First conclusion point.
 - Second conclusion point.
-- Third conclusion point.
 </kesimpulan>
 ```
 
-2–3 points summarizing the article's key takeaways. No new information.
+2–3 points summarizing key takeaways. No new information.
 
 ---
 
 ### CTA Section
 
-Heading is determined by the user's answer in Step 1 (`cta_heading`):
+Heading determined by user's answer in Step 1:
 
-- **User provided heading text** → use verbatim as H2 for every row
+- **User provided heading text** → use verbatim as H2
 - **User chose no H2** → use `**CTA**` label (no `##`)
 
 **Format with H2:**
